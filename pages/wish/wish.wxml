@@ -1,0 +1,44 @@
+<!--pages/wish/wish.wxml-->
+<view class='wish-box'>
+  <view class="weui-cells__title">祈愿链接</view>
+  <view class="weui-cells weui-cells_after-title wish-link-cells">
+    <view class="weui-cell wish-link-cell" bindtap="handleWishLinkCellTap">
+      <textarea class="weui-textarea wish-link-textarea" focus="{{wishLinkTextareaFocus}}"
+        placeholder="此处粘贴祈愿链接，如：https://webstatic.mihoyo.com/hk4e/event/e20190909gacha/index.html?...#/log " maxlength="{{linkMaxLength}}" bindinput="handleWishLogLinkInput"
+        value="{{wishLogLink}}" />
+      </view>
+  </view>
+  <view class='wish-link-footer form-item-footer'>
+    <view class="weui-cells__tips cells--weui-cells__tips theme-color" bindtap="handleTutorial">如何获取链接？</view>
+    <view class="weui-cells__tips cells--weui-cells__tips">{{wishLogLink.length}}/{{linkMaxLength}}</view>
+  </view>
+
+  <view class="weui-cells__title">最大查询祈愿数</view>
+  <view class="weui-cells weui-cells_after-title wish-selector-cells">
+    <view class="weui-cell" >
+      <slider class="default-selector" bindchange="handleMaxCountChanged" min="600" max="1200" block-size="20" value="{{maxCount}}" show-value activeColor="{{themeColor}}"/>
+    </view>
+  </view>
+ <view class="wish-pagation-footer form-item-footer">
+  <view class="weui-cells__tips cells--weui-cells__tips" >最大能查询的祈愿数（防止查询请求过多）</view>
+ </view>
+
+
+  <view class="weui-cells__title">每页条数</view>
+  <view class="weui-cells weui-cells_after-title wish-selector-cells">
+    <view class="weui-cell" >
+      <slider class="default-selector" bindchange="handlePageRowSizeChanged" min="6" max="20" block-size="20" value="{{pageRowSize}}" show-value activeColor="{{themeColor}}"/>
+    </view>
+  </view>
+ <view class="wish-pagation-footer form-item-footer">
+  <view class="weui-cells__tips cells--weui-cells__tips" >每页获取的祈愿记录数（米忽悠限制最大20）</view>
+ </view>
+
+  <view class="weui-btn-area wish-form-btn">
+      <button class="weui-btn theme-color" bindtap="handleAnalysisWish">祈愿分析</button>
+  </view>
+  <hui-modal wx:if="{{showModal}}">
+    <mp-loading slot="content"  type="circle" tips="正在查询{{wishResult[wishType]['title']}}祈愿信息，第{{page}}页，请稍后"></mp-loading>
+    <button slot="footer" type="warn" bindtap="handleCancelAnalysis">取消查询</button>
+  </hui-modal>
+</view>

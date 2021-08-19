@@ -1,0 +1,95 @@
+/* pages/wishResult/wishResult.wxss */
+.wish-result{
+  background-color: #F4F5F6;
+  padding:20px 10px;
+  font-size: 12pt;
+  color: #3D3D3D;
+}
+.wish-result .wish-result-title{
+  font-size: 13pt;
+}
+.wish-result .wish-result-sub-title{
+  font-size: 10pt;
+  color:#94999E;
+}
+.wish-result-item {
+  background-color: #FFFFFF;
+  padding:10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, .1);
+}
+.wish-result-item:not(:first-child){
+  margin-top: 10px;
+}
+.wish-result-item .wish-result-chart{
+  height: 180px;
+}
+
+
+ec-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.wish-summary{
+  display: flex;
+  flex-direction: column;
+  font-family: SourceHanSansCN-Normal, SourceHanSansCN;
+}
+
+.wish-summary .wish-summary-row{
+  display: flex;
+}
+
+.wish-summary .wish-summary-cell{
+  display: flex;
+}
+.wish-summary .wish-summary-cell.wish-summary-title{
+  text-align: right;
+  flex-shrink: 0;
+  flex-wrap: nowrap;
+}
+.wish-summary .wish-summary-gold-history-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.wish-summary .wish-summary-gold-history-list .wish-summary-gold-history-item:not(:last-child){
+  margin-right:5px;
+}
+
+.wish-result-placeholder{
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 150rpx 15px  300rpx 15px;
+  box-sizing: border-box;
+  font-size: 12pt;
+}
+
+.wish-result-placeholder button{
+  font-size: 12pt;
+}
+
+.wish-result-placeholder .wish-result-placeholder-icon-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wish-result-placeholder .wish-result-placeholder-icon-box .wish-result-placeholder-text{
+  margin-top: 15px;
+}
+
+.more-tips-box {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+.more-tips-box .desc-text{
+  display: flex;
+  flex-direction: column;
+  font-size: 10pt;
+}

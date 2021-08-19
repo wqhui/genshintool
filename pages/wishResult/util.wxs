@@ -1,0 +1,86 @@
+function toFixed (value) {
+    return value.toFixed(2)
+}
+
+function ceil(value){
+    return Math.ceil(value)
+}
+
+function getCountEliminateInterference(goldList, count){
+    var lastGold = goldList[goldList.length-1]
+    return count - lastGold.whichWish
+}
+
+function getGoldCount(item){
+    return item.goldWeaponCount+item.goldRoleCount
+}
+
+function getGoldAverageCount(item){
+    if(item.goldWeaponCount > 0 || item.goldRoleCount > 0){
+        return ceil(item.count/getGoldCount(item))
+    }
+    return '-'
+}
+
+function getGoldAverageCountEliminateInterference(item){
+    var goldCountEliminateInterference = getGoldCount(item) - 1
+    if(goldCountEliminateInterference > 0){
+        var countEliminateInterference = getCountEliminateInterference(item.goldList, item.count)
+        return ceil(countEliminateInterference/goldCountEliminateInterference)
+    }
+    return '-'
+}
+
+
+function getNextGoldCount(item){
+    var maxWish = item.maxWish 
+    var lastGoldWhichWish = item.lastGoldWhichWish
+    return maxWish - (lastGoldWhichWish >0? lastGoldWhichWish - 1: count)
+}
+
+function getPurpleCount(item){
+    return item.purpleWeaponCount + item.purpleRoleCount
+}
+
+
+function getPurplePercent(item){
+    var count = item.count
+    return '['+(count > 0 ? toFixed(getPurpleCount(item)/count*100) : 0)+'%]'
+}
+
+function getPurplePercentEliminateInterference(item){
+    var purpleCountEliminateInterference = getPurpleCount(item) - 1
+    if(purpleCountEliminateInterference > 0 ){
+        var countEliminateInterference = getCountEliminateInterference(item.goldList, item.count)
+        return '['+(countEliminateInterference > 0 ? toFixed(purpleCountEliminateInterference/countEliminateInterference*100) : 0)+'%]'
+    }
+    return ''
+}
+
+function getGoldPercent(item){
+    var count = item.count
+    return '['+(count > 0 ? toFixed(getGoldCount(item)/count*100) : 0)+'%]'
+}
+
+function getGoldPercentEliminateInterference(item){
+    var goldCountEliminateInterference = getGoldCount(item) - 1
+    if(goldCountEliminateInterference > 0 ){
+        var countEliminateInterference = getCountEliminateInterference(item.goldList, item.count)
+        return '['+(countEliminateInterference > 0 ? toFixed(goldCountEliminateInterference/countEliminateInterference*100) : 0)+'%]'
+    }
+    return ''
+}
+
+module.exports = {
+    toFixed:toFixed,
+    ceil:ceil,
+    getGoldCount:getGoldCount,
+    getGoldAverageCount:getGoldAverageCount,
+    getGoldAverageCountEliminateInterference:getGoldAverageCountEliminateInterference,
+    getNextGoldCount:getNextGoldCount,
+    getPurpleCount:getPurpleCount,
+    getPurplePercent:getPurplePercent,
+    getPurplePercentEliminateInterference:getPurplePercentEliminateInterference,
+    getGoldPercent:getGoldPercent,
+    getGoldPercentEliminateInterference:getGoldPercentEliminateInterference
+}

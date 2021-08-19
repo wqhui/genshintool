@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/wish/wish",
+    "pages/wishResult/wishResult",
+    "pages/tutorial/tutorial",
+    "pages/more/more"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#00c3ff",
+    "navigationBarTitleText": "萍姥姥的壶宝箱",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "壶中",
+        "iconPath": "/img/home.png",
+        "selectedIconPath": "/img/home_a.png"
+      },
+      {
+        "pagePath": "pages/more/more",
+        "text": "壶外",
+        "iconPath": "/img/more.png",
+        "selectedIconPath": "/img/more_a.png"
+      }
+    ],
+    "selectedColor": "#00c3ff",
+    "color": "#94999E"
+  },
+  "useExtendedLib": {
+    "weui": true
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

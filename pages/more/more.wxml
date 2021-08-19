@@ -1,0 +1,20 @@
+<!--pages/more/more.wxml-->
+<view class="more-box">
+  <view class="more-box-header">
+    <view class="more-box-title">异世相遇</view>
+  </view>
+  <mp-cells ext-class="more-box-cells" title="全局开关">
+    <mp-cell>
+      饼图兼容模式<text class="more-item-sub-title aux-grey-color">(祈愿结果图无法显示时切换)</text>  
+      <view slot="footer"><switch checked="{{forceUseOldCanvas}}" bindchange="handleSwitchChange"/></view>
+    </mp-cell>
+  </mp-cells>
+  <mp-cells ext-class="more-box-cells" title="关于项目">
+    <mp-cell>
+      <text class="more-about-project">简单的原神工具箱，虽然目前只有祈愿记录查询分析ORZ。
+        github地址：<text class="theme-color github-link" selectable>https://github.com/wqhui/genshintool</text><text class="aux-grey-color"selectable>（长按超链接复制）</text>
+        喜欢的话可以点个star，发现bug可以在github上提issues，源码后续也会发布到github上。
+      </text>
+    </mp-cell>
+  </mp-cells>
+</view>

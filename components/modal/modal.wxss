@@ -1,0 +1,43 @@
+/* components/modal/modal.wxss */
+.hui-modal-mask {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .45)
+}
+
+.ant-modal-wrap {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+}
+
+.ant-modal-wrap::before {
+  display: inline-flex;
+  width: 0;
+  height: 100%;
+  vertical-align: middle;
+  content: "";
+}
+
+.hui-modal {
+  display: inline-flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  width: 600rpx;
+  vertical-align: middle;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.hui-modal .hui-modal-footer{
+  border-top: 1rpx solid rgb(240, 240, 240);
+  padding:20rpx;
+}

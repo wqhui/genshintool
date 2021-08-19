@@ -1,0 +1,4 @@
+<!--components/tool-item/tool-item.wxml-->
+<view class='tool-item'>
+  <button class="tool-item-btn weui-btn_cell weui-btn_cell-default theme-grey-bg-color theme-color" bindtap="handleToolItemTap">{{name}}</button>
+</view>

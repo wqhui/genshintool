@@ -1,0 +1,27 @@
+/**index.wxss**/
+page{
+  display: flex;
+  min-height: 100%;
+}
+.app{
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  padding-left:10px;
+  padding-right:10px;
+  font-size: 12pt;
+}
+
+.app button{
+  font-size: 12pt;
+  font-weight: normal;
+}
+
+.tool-list{
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+.tool-list .tool-item:nth-child(2n+1){
+  margin:5px 0
+}

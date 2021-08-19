@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<view class="app">
+  <view class="tool-list">
+    <tool-item wx:for="{{tools}}" wx:key="path"  name="{{item.name}}" path="{{item.path}}"></tool-item>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+<!--components/wish-result-chart/wish-result-chart.wxml-->
+
+<view class="wish-result-chart" >
+  <ec-canvas force-use-old-canvas="{{forceUseOldCanvas}}" type="2d" id="{{id}}" canvas-id="{{id}}_pie" ec="{{ ec }}"></ec-canvas>
+</view>
+

@@ -1,0 +1,33 @@
+/* components/wish-result-chart/wish-result-chart.wxss */
+.wish-result-title{
+  font-size: 16px;
+}
+.wish-result-item {
+  background-color: #FFFFFF;
+  padding:10px;
+  border-radius: 5px;
+}
+.wish-result-item .wish-result-chart{
+  height: 200px;
+}
+.wish-result-item .wish-result-desc{
+  display: flex;
+  flex-direction: column;
+}
+.wish-result-item  .wish-result-gold-history{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wish-result-item  .wish-result-gold-history .wish-result-gold-history-text:not(:first-child)::before{
+    content: '|';
+    padding: 0 2px;
+    background-color: #FFFFFF;
+    color: #FFFFFF;
+}
+
+
+ec-canvas {
+  width: 100%;
+  height: 100%;
+}

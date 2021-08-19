@@ -1,0 +1,37 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #232629;
+} 
+.theme-color{
+  color: #00c3ff;
+}
+.gold-color-1{
+  color: #e6b322;
+}
+.gold-color-2{
+  color: #f0cc00;
+}
+.purple-color-1{
+  color: #a256e1
+}
+.aux-grey-color{
+  color: #94999E;
+}
+.purple-color-2{
+  color: #9c8efa;
+}
+.theme-bg-color{
+  background-color: #00c3ff;
+}
+
+.theme-grey-bg-color{
+  background-color: #F2F2F2;
+}

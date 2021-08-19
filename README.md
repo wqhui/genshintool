@@ -16,3 +16,6 @@ WX小程序的原神工具箱，虽然目前只有祈愿记录查询分析ORZ...
 这个时候界面会显示网页无法打开，**复制红框部分的超链接**，注意有点长，要复制完整。（ps:可以拉到下面文字部分一起复制，然后把文字删掉即可）
 ![祈愿记录](https://github.com/wqhui/genshintool/blob/master/img/wishRecords3.png)
 
+### 注意
+使用前需指定你的 `project.config.json` 下的 `appid` 
+

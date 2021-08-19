@@ -1,0 +1,13 @@
+<!--components/modal/modal.wxml-->
+<view class="hui-modal-root">
+  <view class="hui-modal-mask">
+  </view>
+  <view class="ant-modal-wrap">
+    <view class="hui-modal">   
+      <slot name="content" class="hui-modal-content"></slot>
+      <view class="hui-modal-footer">
+        <slot name="footer"></slot>
+      </view>
+    </view>
+  </view>
+</view>

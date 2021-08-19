@@ -1,0 +1,72 @@
+<!--pages/wishResult/wishResult.wxml-->
+<wxs module="util" src="./util.wxs"></wxs>
+<view class="wish-result-placeholder" wx:if="{{isEmpty}}">
+    <view class="wish-result-placeholder-icon-box">
+        <icon class="wish-result-placeholder-icon" type="warn" size="60" color="#e6b322"></icon>
+        <view class="wish-result-placeholder-text">
+            暂无祈愿记录分析历史数据，请查询后重试
+        </view>
+    </view>
+    <button class="weui-btn theme-color" bindtap="handleToAnalysisWish">祈愿分析</button>
+</view>
+<block wx:else>
+    <view class="wish-result">
+        <view class="wish-result-item" wx:for="{{wishRecordAnalysisList}}" wx:if="{{item.count>0}}" wx:key="key">
+            <view class="wish-result-title">{{item.title}}</view>
+            <view class="wish-result-sub-title">{{item.startTime}} ~ {{item.endTime}}</view>
+            <wish-result-chart ec="{{item.ec}}" id="{{item.key}}" forceUseOldCanvas="{{forceUseOldCanvas}}">
+            </wish-result-chart>
+            <view class="wish-summary">
+                <view class="wish-summary-row">
+                    <view class="wish-summary-cell wish-summary-title">累计抽卡次数：</view>
+                    <view class="wish-summary-cell theme-color" wx:if="{{item.count>0}}">{{item.count}}</view>
+                    <view wx:else>-</view>
+                </view>
+                <view class="wish-summary-row">
+                    <view class="wish-summary-cell wish-summary-title">五星平均抽卡次数：</view>
+                    <view class="wish-summary-cell">
+                        <text class="theme-color">{{util.getGoldAverageCount(item)}}</text>
+                        <text> | <text class="theme-color">{{util.getGoldAverageCountEliminateInterference(item)}}</text></text>
+                    </view>
+                </view>
+                <view class="wish-summary-row">
+                    <view class="wish-summary-cell wish-summary-title">保底还需抽卡次数：</view>
+                    <view class="wish-summary-cell theme-color">
+                        <text class="theme-color">{{util.getNextGoldCount(item)}}</text>
+                    </view>
+                </view>
+                <view class="wish-summary-row">
+                    <view class="wish-summary-cell wish-summary-title">四星汇总：</view>
+                    <view class="wish-summary-cell">
+                        <text class="purple-color-1">{{util.getPurpleCount(item)}}{{util.getPurplePercent(item)}}</text>
+                        <text><text class="purple-color-1">{{util.getPurpleCount(item) - 1 > 0 ? util.getPurpleCount(item) - 1 : '-' }}{{util.getPurplePercentEliminateInterference(item)}}</text></text>
+                    </view>
+                </view>
+                <view class="wish-summary-row">
+                    <view class="wish-summary-cell wish-summary-title">五星汇总：</view>
+                    <view class="wish-summary-cell gold-color-1">
+                        <text class="gold-color-1">{{util.getGoldCount(item)}}{{getGoldPercent(item)}}{{util.getGoldPercent(item)}}</text>
+                        <text> | <text class="gold-color-1">{{util.getGoldCount(item) -1 > 0 ? util.getGoldCount(item) - 1 : '-'}}{{util.getGoldPercentEliminateInterference(item)}}</text></text>
+                    </view>
+                </view>
+                <view class="wish-summary-row">
+                    <view class="wish-summary-cell wish-summary-title">五星历史记录：</view>
+                    <view class="wish-summary-cell wish-summary-gold-history-list gold-color-1">
+                        <block wx:if="{{item.goldWeaponCount>0 || item.goldRoleCount>0}}">
+                            <view class="wish-summary-gold-history-item" wx:for="{{item.goldList}}" wx:key="uid">
+                                {{item.name}}[{{item.whichWishAfterPreviousGold}}]
+                            </view>
+                        </block>
+                        <block wx:else>-</block>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="more-tips-box">
+            <view class="desc-text aux-grey-color">
+                <text>*[1]最多可查询6个月的记录，所以最后一个四星和五星的数据有误差</text>
+                <text>*[2]祈愿结果图若无法显示需去壶外打开兼容模式</text>
+            </view>
+        </view>
+    </view>
+</block>

@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "tool-item":"/components/tool-item/tool-item"
+  }
+}

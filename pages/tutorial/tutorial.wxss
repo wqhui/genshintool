@@ -1,0 +1,22 @@
+/* pages/tutorial/tutorial.wxss */
+.tutorial-box{
+  padding: 10px;
+}
+
+.tutorial-box .tutorial-text{
+  font-size: 12pt;
+  margin-bottom: 5px;
+}
+
+.tutorial-box .img-wrap {
+  position: relative;
+  height: 180px;
+}
+
+.tutorial-box .tutorial-img{
+  margin-bottom: 5px;
+  visibility:visible;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

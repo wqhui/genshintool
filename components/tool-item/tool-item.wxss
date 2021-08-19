@@ -1,0 +1,4 @@
+/* components/tool-item/tool-item.wxss */
+.tool-item .tool-item-btn{
+  width: 50%;
+}

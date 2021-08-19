@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "wish-result-chart":"/components/wish-result-chart/wish-result-chart"
+  },
+  "navigationBarTitleText": ""
+}

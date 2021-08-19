@@ -1,0 +1,21 @@
+<!--pages/tutorial/tutorial.wxml-->
+<view class="tutorial-box">
+  <p class="tutorial-text">首先进入祈愿记录界面</p>
+  <cover-view class="img-wrap">
+    <cover-image class="tutorial-img"
+      src="https://www.evernote.com/shard/s742/sh/96a925f0-596b-a6f8-0abe-ff2a4befad72/f18a0b91372eb01ab84de3fb4f3ba494/res/bf38ea67-02c4-7fbd-b335-97d6b926aded">
+    </cover-image>
+  </cover-view>
+  <p class="tutorial-text">将手机的wifi和数据关掉，点击右上角的刷新按钮。</p>
+  <cover-view class="img-wrap">
+    <cover-image class="tutorial-img"
+      src="https://www.evernote.com/shard/s742/sh/96a925f0-596b-a6f8-0abe-ff2a4befad72/f18a0b91372eb01ab84de3fb4f3ba494/res/4e71de51-e78c-743b-dc95-59e3516eb806">
+    </cover-image>
+  </cover-view>
+  <p class="tutorial-text">这个时候界面会显示网页无法打开，复制红框部分的超链接，注意有点长，要复制完整。（ps:可以拉到下面文字部分一起复制，然后把文字删掉即可）</p>
+  <cover-view class="img-wrap">
+    <cover-image class="tutorial-img"
+      src="https://www.evernote.com/shard/s742/sh/96a925f0-596b-a6f8-0abe-ff2a4befad72/f18a0b91372eb01ab84de3fb4f3ba494/res/ba5bd9a4-1d57-c8a7-6f44-549c5b389b1f">
+    </cover-image>
+  </cover-view>
+</view>
